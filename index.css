@@ -1,0 +1,265 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+
+  
+  
+  
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: rgb(131, 2, 2);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  --max-width: 1170px;
+  --fixed-width: 450px;
+  --clr-orange-1: hsl(12, 83%, 98%);
+  --clr-orange-2: hsl(14, 91%, 95%);
+  --clr-orange-3: hsl(12, 89%, 89%);
+  --clr-orange-4: hsl(13, 87%, 82%);
+  --clr-orange-5: hsl(13, 88%, 68%);
+  --clr-orange-6: hsl(13, 88%, 55%);
+  --clr-orange-7: hsl(13, 74%, 49%);
+  --clr-orange-8: hsl(13, 74%, 33%);
+  --clr-orange-9: hsl(13, 73%, 25%);
+  --clr-orange-10: hsl(13, 73%, 16%);
+  --clr-violet: #6366f1;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #fff;
+  color: var(--clr-grey-1);
+  height: 100vh;
+  line-height: 1.5;
+  font-size: 0.875rem;
+  overflow: hidden;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+  font-family: sans-serif;
+  color: rgb(56, 56, 56);
+  font-weight: 400;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: .5rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+.logo{
+  height: 40px;
+}
+.adjust{
+  width: fit-content;
+  margin: 0;
+}
+
+.margin-remove{
+  margin: 0;
+}
+/*Custom CSS*/
+main{
+  height: 100vh;
+}
+nav{
+  background-color: var(--clr-primary-5);
+  padding: 1rem 1.5rem;
+  margin-bottom: 5rem;
+}
+.nav-center{
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-center h4{
+  font-size: 20px;
+  color: #fff;
+}
+.img-container{
+  position: relative;
+}
+.custom-number{
+  position: absolute;
+  background-color: #fff;
+  right: 0;
+  top: -10px;
+  transform: translateX(20%);
+  font-size: 20px;
+  border-radius: 50%;
+  padding: .2rem;
+  width: auto !important;
+  height: auto !important;
+}
+.list-container{
+  margin: 0 auto;
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+.main-list{
+  padding: .5rem;
+}
+.single-item{
+  display: flex;
+  margin-bottom: 1.7rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.sub-list{
+  display: flex;
+}
+.mob-icon{
+  background-size: cover;
+  height: 80px;
+  margin-right: 2rem;
+}
+.sub-mini-list h4{
+  font-weight: 500;
+}
+.sub-mini-list p{
+  margin: 0;
+  font-size: 17px;
+}
+.arrow-button:hover,
+.sub-mini-list button:hover{
+  opacity: .7;
+}
+.buttons-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.buttons-container h3{
+  font-size: 1.7rem;
+}
+.buttons-container button{
+  border: none;
+  background-color: #fff;
+}
+.sub-mini-list button{
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  color: var(--clr-primary-5);
+  transition: opacity .3s ease-in-out;
+  font-size: 16px;
+}
+.arrow-button{
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  color: var(--clr-primary-5);
+  transition: opacity .3s ease-in-out;
+  font-size: 1.7rem;
+}
+.secret-line{
+  max-width: 800px;
+  margin: 0 auto;
+  color: rgb(90, 89, 89);
+  margin-bottom: 1.1rem;
+}
+.footer{
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.footer p{
+  font-size: 16px;
+  color: #222;
+}
+.footer button{
+  background-color: var(--clr-primary-8);
+  color: var(--clr-primary-5);
+  padding: .4rem .9rem;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.footer button:hover{
+  background-color: var(--clr-primary-3);
+  color: #fff;
+}
+.footer span{
+  background-color: var(--clr-primary-3);
+  font-size: 14px;
+  color: #fff;
+  padding: .2rem .7rem;
+  border: none;
+  border-radius: 4px;
+}
+/*Responsi
+ve CSS*/
+
